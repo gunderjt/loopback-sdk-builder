@@ -284,7 +284,7 @@ Object.assign(BaseLoopbackActionsFactory<Storage>('Storage', StorageActionTypes)
     public readonly type = StorageActionTypes.GET_FILE;
       public payload: {container: any, file: any};
 
-    constructor(container: any = {}, file: any = {}, public meta?: any) {
+    constructor(container: any = {}, file: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {container, file};
     }
   },
@@ -332,7 +332,7 @@ Object.assign(BaseLoopbackActionsFactory<Storage>('Storage', StorageActionTypes)
     public readonly type = StorageActionTypes.REMOVE_FILE;
       public payload: {container: any, file: any};
 
-    constructor(container: any = {}, file: any = {}, public meta?: any) {
+    constructor(container: any = {}, file: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {container, file};
     }
   },
@@ -385,7 +385,7 @@ Object.assign(BaseLoopbackActionsFactory<Storage>('Storage', StorageActionTypes)
     public readonly type = StorageActionTypes.UPLOAD;
       public payload: {req: any, res: any};
 
-    constructor(req: any = {}, res: any = {}, public meta?: any) {
+    constructor(req: any = {}, res: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {req, res};
     }
   },
@@ -437,7 +437,7 @@ Object.assign(BaseLoopbackActionsFactory<Storage>('Storage', StorageActionTypes)
     public readonly type = StorageActionTypes.DOWNLOAD;
       public payload: {container: any, file: any, req: any, res: any};
 
-    constructor(container: any = {}, file: any = {}, req: any = {}, res: any = {}, public meta?: any) {
+    constructor(container: any = {}, file: any = {}, req: any = {}, res: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {container, file, req, res};
     }
   },

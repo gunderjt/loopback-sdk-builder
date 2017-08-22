@@ -31,7 +31,7 @@ Object.assign(BaseLoopbackActionsFactory<Like>('Like', LikeActionTypes), {
     public readonly type = LikeActionTypes.GET_MESSAGE;
       public payload: {id: any, refresh: any};
 
-    constructor(id: any, refresh: any = {}, public meta?: any) {
+    constructor(id: any, refresh: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {id, refresh};
     }
   },
@@ -77,7 +77,7 @@ Object.assign(BaseLoopbackActionsFactory<Like>('Like', LikeActionTypes), {
     public readonly type = LikeActionTypes.GET_ROOM;
       public payload: {id: any, refresh: any};
 
-    constructor(id: any, refresh: any = {}, public meta?: any) {
+    constructor(id: any, refresh: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {id, refresh};
     }
   },

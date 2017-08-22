@@ -31,7 +31,7 @@ Object.assign(BaseLoopbackActionsFactory<RoomAdmin>('RoomAdmin', RoomAdminAction
     public readonly type = RoomAdminActionTypes.GET_ACCOUNT;
       public payload: {id: any, refresh: any};
 
-    constructor(id: any, refresh: any = {}, public meta?: any) {
+    constructor(id: any, refresh: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {id, refresh};
     }
   },
@@ -77,7 +77,7 @@ Object.assign(BaseLoopbackActionsFactory<RoomAdmin>('RoomAdmin', RoomAdminAction
     public readonly type = RoomAdminActionTypes.GET_ROOM;
       public payload: {id: any, refresh: any};
 
-    constructor(id: any, refresh: any = {}, public meta?: any) {
+    constructor(id: any, refresh: any = {}, customHeaders?: Function, public meta?: any) {
       this.payload = {id, refresh};
     }
   },
